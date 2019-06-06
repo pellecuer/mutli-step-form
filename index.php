@@ -11,7 +11,7 @@
                 }
             </style>
     </head>
-    <body class="bg-dark">
+    <body class="bg-dark"> 
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6 bg-light p-4 rounded mt-5">
@@ -33,11 +33,11 @@
                                 <input type="text" name="username" class="form-control" placeholder="user Name">                                    
                             </div>
                             <div class="form-group">
-                                <a href="" class="btn btn-danger" id="next-1">Next</a>
+                                <button type="button" class="btn btn-danger" id="next-1">Next</button>                                
                             </div>
                         </div>
                         <div id="second">
-                        <h4 class="text-center bg-primary p-1 rounded text-light">Contact Information</h4>
+                            <h4 class="text-center bg-primary p-1 rounded text-light">Contact Information</h4>
                             <div class="form-group">
                                 <Label for="email">E-mail</Label>
                                 <input type="email" name="email" class="form-control" placeholder="E-mail">                                    
@@ -47,8 +47,8 @@
                                 <input type="tel" name="phone" class="form-control" placeholder="Phone">                                    
                             </div>
                             <div class="form-group">
-                                <a href="#" class="btn btn-danger" id="prev-2">Previous</a>
-                                <a href="#" class="btn btn-danger" id="next-2">Next</a>
+                                <button type="button" class="btn btn-danger" id="prev-2">Previous</button>
+                                <button type="button" class="btn btn-danger" id="next-2">Next</button>                                
                             </div>
                         </div>
                         <div id="third">
@@ -62,8 +62,8 @@
                                 <input type="password" name="cpass" class="form-control" placeholder="Confirm Password">                                    
                             </div>
                             <div class="form-group">
-                                <a href="#" class="btn btn-danger" id="prev-3">Previous</a>
-                                <input type="submit" name="submit" value="Submit" id="submit" class="btn btn-success">
+                                <button type="button" class="btn btn-danger" id="prev-3">Previous</button>
+                                <input type="submit" name="submit" value="submit" class="btn btn-success" id="submit"></button>                                
                             </div>
                         </div>                               
                     </form>                                       
@@ -76,32 +76,30 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
             integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
         </script>
-        <script type="text/javascript">
-            $(document).ready(function(){
+        <script>
+            $(document).ready(function(){                
                 $("#next-1").click(function(){
-                    $("#second").show();                   
+                    $("#second").show();
                     $("#first").hide();
-                    $("#progressBar").css("width", 60%).html('Step -2');
+                    $("#progressBar").css("width", "60%").text("Step -2");
                 });
-
                 $("#next-2").click(function(){
-                    $("#third").show();                   
+                    $("#third").show();
                     $("#second").hide();
-                    $("#progressBar").css("width", 100%).html('Step -3');
+                    $("#progressBar").css("width", "100%").text("Step -3");
                 });
                 $("#prev-2").click(function(){
                     $("#second").hide();
                     $("#first").show();
-                    $("#progressBar").css("width", 30%).html('Step -1');
-                })
+                    $("#progressBar").css("width", "30%").text("Step -1");
+                });
                 $("#prev-3").click(function(){
                     $("#second").show();
                     $("#third").hide();
-                    $("#progressBar").css("width", 60%);
-                    $("#progressText").html('Step -2');
-                })
-            });   
+                    $("#progressBar").css("width", "60%").text("Step -2");
+                });
+
+            });
         </script>
     </body>
-
 </html>
